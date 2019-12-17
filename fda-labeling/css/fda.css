@@ -1,0 +1,101 @@
+
+
+@import "table.css";
+
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+@namespace fda url('urn:hl7-org:v3');
+
+:root {
+  padding-top: 2em;
+  padding-right: 1em;
+  padding-left: 2em;
+  padding-bottom: 5em;
+}
+
+@media oxygen AND (min-width: 25cm) {
+  /* A gray background */
+  oxy|document {
+    background-color: #fbfbfb;
+  }
+  /* The white page.*/
+  :root {
+    /* White page */
+    border: 1px solid #c6c6c6;
+    background-color: white;
+    /* Centered*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.25in;
+    margin-bottom: 0.25in;
+    /* Letter */
+    width: 21.59cm;
+    min-height: 10cm;
+    /*27.94cm; would be the letter, but a smaller size avoids large caret jumps*/
+  }
+}
+
+fda|document {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+}
+
+fda|document > fda|title {
+  text-align: center;
+}
+
+component, structuredBody, section, title, excerpt, subject {
+  display: block;
+}
+
+title {
+  font-weight: bold;
+}
+
+highlight {
+  font-style: italic;
+}
+
+paragraph {
+  display: block;
+}
+
+list {
+  display: block;
+}
+
+item {
+  display: list-item;
+}
+
+*[styleCode='bold'] {
+  font-weight: bold;
+}
+
+*[styleCode='italics'] {
+  font-style: italic;
+}
+
+*[styleCode='Footnote'] {
+  font-size: 0.8em;
+}
+
+linkHtml:before {
+  -oxy-link:attr(href);
+  content: url('link.png');
+}
+linkHtml {
+  color: blue;
+  text-decoration: underline;
+}
+
+br {
+  display: block;
+}
+sup {
+  baseline-shift: super;
+  font-size: 0.8em;
+}
+sub {
+  baseline-shift: sub;
+  font-size: 0.8em;
+}

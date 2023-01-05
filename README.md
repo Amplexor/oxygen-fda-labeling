@@ -1,5 +1,7 @@
 # oXygen framework for FDA labeling
 
+:wave: This repository was migrated to [https://github.com/acolad-digital/com.acolad.imagemap-pdf](https://github.com/acolad-digital/oxygen-fda-labeling)
+
 Provides support in SyncroSoft oXygenXML for working with Structured Product Labeling XML files..
 
 This framework contains material downloaded from https://www.fda.gov/industry/fda-resources-data-standards/structured-product-labeling-resources
